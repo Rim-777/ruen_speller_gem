@@ -1,5 +1,5 @@
 # ruen_speller_gem
- It's a simple stone, which I wrote in the summer of 2015, as well as a warm-up)))
+ It's a simple gem, which I wrote in the summer of 2015, as well as a warm-up)))
  It checking the spelling English or Russian text wiht tech.yandex.ru/speller site.
   examples:
   puts RuenSpeller.correct?("love")#=> true
