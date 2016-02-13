@@ -11,3 +11,5 @@
   
   be happy))
       Timo
+      
+https://rubygems.org/gems/ruen_speller
