@@ -5,15 +5,8 @@ Gem::Specification.new do |spec|
   spec.summary         = 'Сheck the spelling of your text'
   spec.authors         = ["Timo Moss"]
   spec.description     =<<ruen_speller_description
-This simple gem I've done in training.
-It checking the spelling English or Russian text wiht tech.yandex.ru/speller site.
-examples:
-puts RuenSpeller.correct?("love")#=> true
-puts RuenSpeller.correct?("leve")#=> ["lee", "live", "love", "lave", "level"]
-RuenSpeller.correct?("leve").request_value #=> 'leve'
-RuenSpeller.correct?("leve").checked_values #=> ["lee", "live", "love", "lave", "level"]
-The default method sends GET-request. If you need a POST-request, just drop the last argument - true.
-Example: RuenSpeller.correct?("Love", true)
+Simple gem for verifying the spelling of English words with tech.yandex.ru/speller site.
+
 ruen_speller_description
 
   spec.email           = 'javatimomoss@gmail.com'
@@ -22,7 +15,7 @@ ruen_speller_description
 
   spec.files           = [
       "lib/ruen_speller.rb",
-      "lib/ruen_speller/all_requires.rb",
+      "lib/ruen_speller/requires.rb",
       "lib/ruen_speller/answer.rb",
       "lib/ruen_speller/controller.rb",
       "lib/ruen_speller/data.rb",
@@ -36,5 +29,4 @@ ruen_speller_description
   Internet\ connection
   Enough\ courage\ to\ use\ it
   }
-
-  end
+end

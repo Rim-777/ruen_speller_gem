@@ -1,19 +1,11 @@
-require_relative 'all_requires'
+require_relative 'requires'
 
 module RuenSpeller
-
   class Request
-
     @@questions_buffer = Array.new
-
-    def self.get_questions_buffer
-      return @@questions_buffer
-    end
-
     attr_reader :request_string
 
     def initialize data
-
       if data.blank?
         raise IncorrectDataError
       elsif data.split("").include?(" ")
@@ -24,7 +16,10 @@ module RuenSpeller
       end
 
       @request_string = "#{data}"
+    end
 
+    def self.get_questions_buffer
+      return @@questions_buffer
     end
 
     def to_s

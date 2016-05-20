@@ -1,22 +1,13 @@
-require_relative 'all_requires'
+require_relative 'requires'
 
 module RuenSpeller
-
   class Controller
-
     include HttpRequests
 
     def check_text(text_to_check)
-
       data_validate(text_to_check)
       @answers = json_parse! send_request(text_to_check, set_request_type(text_to_check))
-
-      if all_correct?
-        true
-      else
-        @answers
-      end
-
+      all_correct? ? true : @answers
     end
 
     private
@@ -50,7 +41,5 @@ module RuenSpeller
     def set_request_type data
       data.last == true ? true : false
     end
-
   end
-
 end

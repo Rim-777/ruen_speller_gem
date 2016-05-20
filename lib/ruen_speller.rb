@@ -1,7 +1,6 @@
-require_relative 'ruen_speller/all_requires'
+require_relative 'ruen_speller/requires'
 
 module RuenSpeller
-
   ERRORS_CLASSES = [:IncorrectDataError, :PermissibleNumberError]
   ERRORS_CLASSES.each { |err| const_set err, Class.new(StandardError) }
 
@@ -10,6 +9,4 @@ module RuenSpeller
     Array.wrap(Controller.new.check_text(text))
   rescue IncorrectDataError
   end
-
 end
-

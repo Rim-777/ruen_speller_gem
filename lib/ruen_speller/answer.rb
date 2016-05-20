@@ -1,7 +1,5 @@
 module RuenSpeller
-
   class Answer
-
     attr_reader :request_value, :checked_values
     @@answers_buffer = Array.new
 
